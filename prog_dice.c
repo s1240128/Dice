@@ -5,8 +5,14 @@
 int main(void){
 
   int s, t, total = 0;
+  char name[256];
 
   srand(time(NULL));
+
+  printf("What is your name?\n> ");
+  scanf("%s", name);
+  printf("Hello, %s!\n", name);
+
 
   s = rand() % 6 + 1;
   t = rand() % 6 + 1;
@@ -14,8 +20,8 @@ int main(void){
 
   printf("Rolling the dice...\nDie 1: %d\nDie 2: %d\nTotal value: %d \n", s, t, total);
 
-if(total > 7) printf("You won\n");
-else printf("You lost\n");
+if(total > 7) printf("%s won\n", name);
+else printf("%s lost\n", name);
 
   return 0;
 }
