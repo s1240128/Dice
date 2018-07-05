@@ -5,8 +5,13 @@
 int main(void){
 
   int s, t, total = 0;
+  char name[256];
 
   srand(time(NULL));
+
+printf("What is your name?\n> ");
+scanf("%s", name);
+printf("Hello, %s!\n\n", name);
 
   s = rand() % 6 + 1;
   t = rand() % 6 + 1;
